@@ -1,14 +1,15 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using System.ComponentModel.DataAnnotations;
 
-namespace EmailForm.Models
+namespace Emaid.Models
 {
-    public class EmailFormViewModel
+    public class HomeViewModel
     {
+        [Required]
+        [EmailAddress]
         public string Email     { get; set; }
+
         public string Subject   { get; set; }
+
         public string Body      { get; set; }
     }
 }

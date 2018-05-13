@@ -1,6 +1,7 @@
-@model EmailForm.Models.EmailFormViewModel
+@model Emaid.Models.HomeViewModel
+@using Emaid.Controllers
 
-@using(Html.BeginUmbracoForm("Submit", "EmailForm")) {
+@using(Html.BeginUmbracoForm<HomeSurfaceController>("Submit", "Home")) {
     <div>
         @Html.TextBoxFor(m=>m.Email)
     </div>

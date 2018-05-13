@@ -1,17 +1,13 @@
-using EmailForm.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using Emaid.Models;
 using System.Web.Mvc;
 using Umbraco.Web.Mvc;
 
-namespace EmailForm.Controllers
+namespace Emaid.Controllers
 {
-    public class EmailFormController : SurfaceController
+    public class HomeSurfaceController : SurfaceController
     {
         [HttpPost]
-        public ActionResult Submit(EmailFormViewModel model)
+        public ActionResult Submit(HomeViewModel model)
         {
             if (!ModelState.IsValid)
                 return CurrentUmbracoPage();
