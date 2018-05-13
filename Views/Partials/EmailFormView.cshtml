@@ -1,0 +1,14 @@
+@model EmailForm.Models.EmailFormViewModel
+
+@using(Html.BeginUmbracoForm("Submit", "EmailForm")) {
+    <div>
+        @Html.TextBoxFor(m=>m.Email)
+    </div>
+    <div>
+        @Html.TextBoxFor(m=>m.Subject)
+    </div>
+    <div>
+        @Html.TextBoxFor(m=>m.Body)
+    </div>
+    <input type="submit" name="Submit" value="Submit" />
+}

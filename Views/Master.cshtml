@@ -1,0 +1,37 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = null;
+}
+
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    
+    <title></title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    @RenderSection("Redirect", false)
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div id="header-container">
+        <header>
+            <h1 id="title">@Umbraco.Field("siteName", recursive: true)</h1>
+        </header>
+    </div>
+    
+    <div id="page-container">
+        @RenderBody()
+    </div>
+    
+    <div id="footer-container">
+        <footer>
+            @Umbraco.Field("content", recursive: true)
+            @Umbraco.Field("author", recursive: true)
+        </footer>
+    </div>
+</body>
