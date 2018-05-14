@@ -20,7 +20,7 @@
 <body>
     <div id="header-container">
         <header>
-            <h1 id="title">@Umbraco.Field("siteName", recursive: true)</h1>
+            <h1 id="title" class="pushright">@Umbraco.Field("siteName", recursive: true)</h1>
         </header>
     </div>
     
@@ -29,9 +29,11 @@
     </div>
     
     <div id="footer-container">
-        <footer>
-            @Umbraco.Field("content", recursive: true)
-            @Umbraco.Field("author", recursive: true)
-        </footer>
+        <section class="section--centered-vert fullwidth">
+            <footer id="page-footer">
+                <span class="footer-text">@Umbraco.Field("content", recursive: true)</span>
+                <span class="footer-text">@Umbraco.Field("author", recursive: true)</span>
+            </footer>
+        </section>
     </div>
 </body>

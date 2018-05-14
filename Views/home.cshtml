@@ -4,6 +4,10 @@
 	Layout = "Master.cshtml";
 }
 
-<section>
+<section id="site-description">
+    @Umbraco.Field("description")
+</section>
+
+<section class="section--centered section__main pushdown">
     @Umbraco.Field("emailForm")
 </section>

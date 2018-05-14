@@ -1,5 +1,6 @@
 html, body {
 	height: 100%;
+    margin: 0;
 }
 
 body {
@@ -8,13 +9,93 @@ body {
 }
 
 #header-container {
-	flex: 0 0 5em;
+    flex: 0 0 5em;
+    background-color: #F3DFA2;
+    border-bottom: 2px solid #231F20;
+    color: #231F20;
 }
 
 #page-container {
-	flex: 1 0 0;
+    flex: 1 0 0;
+    background-color: #F7F3E3;
+    position: relative;
+    color: #231F20;
 }
 
 #footer-container {
-	flex: 0 0 5em;
+    position: relative;
+    flex: 0 0 5em;
+    background-color: #231F20;
+    color: #B3B6B7;
+}
+
+#page-footer {
+    display: flex;
+}
+
+.fullwidth {
+    width: 100%;
+}
+
+.pushright {
+    margin-left: 20px;
+}
+
+.pushdown {
+    margin-top: 20px;
+}
+
+.section--centered {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.section--centered-vert {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+#site-description {
+    margin: 30px 0;
+}
+
+.section__main {
+    background-color: #E1DCDA;
+    border-radius: 10px;
+    box-shadow: 0 0 3px 0 #231F20;
+    width: 100%;
+    max-width: 500px;
+}
+
+.section__main form {
+    margin: 20px;
+}
+
+.form-line {
+    display: flex;
+    margin: 5px 0;
+}
+
+.form-line label {
+    flex: 0 0 120px;
+    font-weight: bold;
+}
+
+.form-line input, .form-line textarea {
+    flex: 1 0 0;
+    margin-left: 5px;
+}
+
+#send-mail {
+    float: right;
+    margin: 20px 0;
+    width: 80px;
+    height: 25px;
+}
+
+.footer-text {
+    flex: 1 0 0;
+    text-align: center;
 }

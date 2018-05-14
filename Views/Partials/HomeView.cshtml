@@ -2,14 +2,17 @@
 @using Emaid.Controllers
 
 @using(Html.BeginUmbracoForm<HomeSurfaceController>("Submit", "Home")) {
-    <div>
+    <div class="form-line">
+        <label>Email Address:</label>
         @Html.TextBoxFor(m=>m.Email)
     </div>
-    <div>
-        @Html.TextBoxFor(m=>m.Subject)
+    <div class="form-line">
+        <label>Subject</label>
+        @Html.TextBoxFor(m => m.Subject)
     </div>
-    <div>
-        @Html.TextBoxFor(m=>m.Body)
+    <div class="form-line">
+        <label>Message</label>
+        @Html.TextAreaFor(m => m.Body, new { @rows = 10 })
     </div>
-    <input type="submit" name="Submit" value="Submit" />
+    <input id="send-mail" type="submit" name="Submit" value="Send" />
 }
